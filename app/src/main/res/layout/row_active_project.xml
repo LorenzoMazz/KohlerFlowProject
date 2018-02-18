@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/padding_medium"
+    android:layout_marginLeft="@dimen/padding_medium"
+    android:layout_marginTop="@dimen/padding_small"
+    android:clickable="true"
+    android:elevation="5dp"
+    android:foreground="@drawable/ripple_effect_blue"
+    android:paddingBottom="@dimen/padding_small"
+    android:paddingTop="@dimen/padding_small"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_small"
+            android:layout_marginTop="@dimen/padding_small">
+
+
+            <ImageView
+                android:id="@+id/image_icon_project"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginRight="@dimen/padding_small"
+                CircleProgressView:srcCompat="@drawable/ic_assignment_blue_24dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_active_project"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:paddingBottom="@dimen/padding_xx_small"
+                    android:text="PROJECT 1"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/txt_xnormal" />
+
+                <TextView
+                    android:id="@+id/text_active_project4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="Inizio data"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/txt_mid" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageIconAlert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_warning_red_24dp" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_large"
+                android:layout_marginRight="@dimen/padding_large">
+
+                <TextView
+                    android:id="@+id/text_percet_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="89%"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/txt_normal" />
+
+                <at.grabner.circleprogress.CircleProgressView
+                    android:id="@+id/circleProgress_state_project"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    CircleProgressView:cpv_barColor="@color/dark_blue"
+                    CircleProgressView:cpv_barStrokeCap="Round"
+                    CircleProgressView:cpv_barWidth="10dp"
+                    CircleProgressView:cpv_innerContourSize="0dp"
+                    CircleProgressView:cpv_maxValue="100"
+                    CircleProgressView:cpv_outerContourSize="0dp"
+                    CircleProgressView:cpv_rimColor="@android:color/darker_gray"
+                    CircleProgressView:cpv_rimWidth="8dp"
+                    CircleProgressView:cpv_seekMode="false"
+                    CircleProgressView:cpv_textSize="0dp"
+                    CircleProgressView:cpv_value="0" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/image_icon_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/padding_small"
+                CircleProgressView:srcCompat="@drawable/ic_shortcut_t1" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/padding_x_small"
+    android:paddingTop="@dimen/padding_small">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_medium"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewSender"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="Mario Rossi"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/txt_xnormal" />
+
+        <ImageView
+            android:id="@+id/imageWarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_warning_red_24dp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewTextMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageViewMessageIcon"
+        android:layout_margin="@dimen/padding_medium"
+        android:maxLines="2"
+        android:text="Lorem ipsum dolor sit amet, lacus ultrices scelerisque officia amet, ut mauris, aliquet blandit vehicula taciti, nec tristique vitae maecenas ex, platea dui odio mauris nullam qui ipsum. "
+        android:textColor="@color/dark_blue" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonSeeMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textViewTextMessage"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/padding_large"
+        android:layout_marginTop="@dimen/padding_small"
+        android:background="@drawable/btn_log_blue"
+        android:foreground="@drawable/ripple_effect_white"
+        android:minHeight="0dp"
+        android:paddingBottom="@dimen/padding_small"
+        android:paddingLeft="@dimen/padding_mlarge"
+        android:paddingRight="@dimen/padding_mlarge"
+        android:paddingTop="@dimen/padding_small"
+        android:text="SEE MORE"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_mid" />
+
+    <View
+        android:id="@+id/viewRowEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/buttonSeeMore"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:layout_toRightOf="@id/imageViewMessageIcon"
+        android:layout_weight="1"
+        android:background="@color/dark_blue" />
+
+
+</LinearLayout>

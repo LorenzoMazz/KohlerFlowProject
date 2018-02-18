@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="project.kohler.com.kholer_project">
+
+    <application
+        android:name=".CC.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activities.Act_Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.Act_Splash" />
+        <activity android:name=".Activities.Act_home" />
+        <activity android:name=".Activities.Act_compilation_commercial" />
+        <activity android:name=".Activities.Act_sub_compilation_commercial" />
+        <activity android:name=".Activities.Act_main_project" />
+        <activity android:name=".Activities.Act_list_attached"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Kholer_Project</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Password dimenticata?</string>
+    <string name="otherwise">Oppure</string>
+    <string name="register">Registrati</string>
+    <string name="acceedi">Accedi</string>
+    <string name="drawer_open">Lateral menu open</string>
+    <string name="drawer_close">Lateral menu close</string>
+
+    <string name="yes">Si</string>
+    <string name="no">"No</string>
+
+    <string name="warning">Avviso</string>
+    <string name="ok">Ok</string>
+
+    <string name="please_provide_student_code_password">Per favore inserire correttamente Email e Passowrd</string>
+    <string name="you_forgot_the_password">Funzione di recupero password non abilitata</string>
+    <string name="you_will_be_regitered">Funzione di registro utenti non abilitata</string>
+
+    <string name="no_active_project">Non ci sono progetti attivi</string>
+    <string name="a_project_title">PROGETTI ATTIVI</string>
+    <string name="kholer">KOHLER</string>
+    <string name="home">Home</string>
+    <string name="department">Dipartimento</string>
+    <string name="new_project">NUOVO PROGETTO</string>
+    <string name="nuovoProgetto">NUOVO PROGETTO</string>
+    <string name="createProject">CREA PROGETTO</string>
+    <string name="riquadro">RIQUADRO</string>
+    <string name="riQuadro">RIQUADRO</string>
+    <string name="tAndOmolog">TEMPERATURA E OMOLOGAZIONE</string>
+    <string name="calibr">CALIBRAZIONE</string>
+    <string name="ambient">AMBIENTE</string>
+    <string name="config_motors">CONFIGURAZIONE MOTORI</string>
+    <string name="infLog">INFORMAZIONI LOGISTICHE</string>
+
+    <string name="creation_complete">Il Progetto è stato creato correttamente</string>
+    <string name="type_machine">TIPO DI MACCHINA</string>
+    <string name="add_infos">Inserisci qui le informazioni</string>
+    <string name="save">SALVA</string>
+    <string name="client">CLIENTE</string>
+    <string name="type_application">TIPO DI APPLICAZIONE</string>
+    <string name="brand">MARCHIO</string>
+    <string name="data_saved">I dati sono stati caricati correttamente</string>
+    <string name="no_progetti_respinti">Al momento non ci sono progetti respinti</string>
+    <string name="progetti_respinti">PROGETTI RESPINTI</string>
+    <string name="p_res">PROGETTI RESPINTI</string>
+
+    <string name="documents">DOCUMENTI</string>
+    <string name="attached">ALLEGATI</string>
+    <string name="notes">NOTE</string>
+    <string name="chat">CHAT</string>
+    <string name="titoloProgetto">TITOLO PROGETTO</string>
+    <string name="addNote">AGGIUNGI NOTA</string>
+    <string name="addAttached">AGGIUNGI ALLEGATO</string>
+
+    <string name="addNewAttachedNotImplemented">Funzione di aggiunta allegato non abilitata</string>
+    <string name="addNewNoteNotImplemented">Funzione di aggiunta note non abilitata</string>
+    <string name="showAttachedNotImplemented">Funzione di visualizzazione allegato non abilitata</string>
+    <string name="save_">SALVA</string>
+    <string name="really_wish_save">Sei sicuro di salvare i dati da te inseriti?</string>
+    <string name="save_file_option_dsable">Funzione di salvataggio dati disabilitata</string>
+    <string name="aggiungi_progetto">AGGIUNGI NUOVO PROGETTO</string>
+    <string name="youMustRevisionTheProject">De caricare la revisione del progetto prima di poter salvare i dati</string>
+    <string name="settings">Impostazioni</string>
+    <string name="logout">Logout</string>
+    <string name="settings_text">Impostazioni</string>
+    <string name="library">Storico</string>
+    <string name="mail_text">Email</string>
+    <string name="help_text">Aiuto</string>
+    <string name="really_wish_logout">Vuoi davvero effetturae il Logout?</string>
+    <string name="function_not_enable">Funzione non abilitata</string>
+    <string name="progettiConclusi">PROGETTI CONCLUSI</string>
+    <string name="noOldProject">Non ci sono progetti nello storico</string>
+</resources>

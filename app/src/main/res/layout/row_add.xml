@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/padding_medium"
+    android:layout_marginLeft="@dimen/padding_medium"
+    android:layout_marginTop="@dimen/padding_medium"
+    android:background="@color/dark_blue"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/padding_x_small"
+    android:paddingTop="@dimen/padding_x_small">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/padding_medium"
+            android:src="@drawable/ic_add_circle_outline_white_24dp" />
+
+
+        <TextView
+            android:id="@+id/text_document_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingTop="@dimen/padding_small"
+            android:text="Add New Object"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_xnormal" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/padding_small" />
+</LinearLayout>

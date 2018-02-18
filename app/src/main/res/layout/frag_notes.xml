@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ViewEmptyListMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imagePageEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="false"
+            android:layout_marginBottom="@dimen/padding_medium"
+            android:src="@drawable/ic_message_white_24dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.4"
+            android:gravity="fill_vertical|center_horizontal"
+            android:text="There are no messages"
+            android:textSize="@dimen/txt_xnormal" />
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLayoutMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleViewMessages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_x_small"
+        android:layout_above="@+id/bottom"
+        android:layout_alignParentTop="false"
+        android:layout_marginBottom="-1dp"
+        android:background="@drawable/shadow_blue_invers" />
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_blue"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_add_new_project"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/padding_medium"
+            android:layout_marginLeft="@dimen/padding_enormous"
+            android:layout_marginRight="@dimen/padding_enormous"
+            android:layout_marginTop="@dimen/padding_small"
+            android:background="@drawable/btn_log"
+            android:foreground="@drawable/ripple_effect"
+            android:minHeight="0dp"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_medium"
+            android:text="@string/addNote"
+            android:textColor="@color/dark_blue" />
+    </LinearLayout>
+</RelativeLayout>

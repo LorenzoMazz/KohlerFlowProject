@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="@drawable/ripple_effect"
+    android:paddingBottom="@dimen/padding_x_small"
+    android:paddingTop="@dimen/padding_small">
+
+    <View
+        android:id="@+id/viewRowEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/buttonSeeMore"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:layout_toRightOf="@id/imageViewMessageIcon"
+        android:background="@color/dark_blue" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonSeeMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textViewTextMessage"
+        android:layout_marginRight="@dimen/padding_large"
+        android:layout_marginTop="@dimen/padding_small"
+        android:background="@drawable/btn_log_blue"
+        android:foreground="@drawable/ripple_effect_white"
+        android:minHeight="0dp"
+        android:paddingBottom="@dimen/padding_small"
+        android:paddingLeft="@dimen/padding_mlarge"
+        android:paddingRight="@dimen/padding_mlarge"
+        android:paddingTop="@dimen/padding_small"
+        android:text="SEE MORE"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_mid" />
+
+    <ImageView
+        android:id="@+id/imageViewMessageIcon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/padding_medium"
+        app:srcCompat="@drawable/ic_account_circle_blue_24dp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewTextMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewMessageIcon"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:layout_toRightOf="@+id/imageViewMessageIcon"
+        android:maxLines="2"
+        android:text="Lorem ipsum dolor sit amet, lacus ultrices scelerisque officia amet, ut mauris, aliquet blandit vehicula taciti, nec tristique vitae maecenas ex, platea dui odio mauris nullam qui ipsum. "
+        android:textColor="@color/dark_blue" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageViewMessageIcon"
+        android:layout_alignTop="@+id/imageViewMessageIcon"
+        android:layout_toRightOf="@+id/imageViewMessageIcon"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/imageViewMessageIcon"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewSender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Mario Rossi"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/txt_xnormal" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewMessageDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/padding_medium"
+                android:text="Data"
+                android:textColor="@color/dark_blue" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
