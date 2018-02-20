@@ -1,11 +1,14 @@
 package project.kohler.com.kholer_project.CC;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.os.Build;
 import android.text.Html;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.util.DisplayMetrics;
+import android.view.View;
 
 /**
  * Created by Lorenzo on 13/02/2018.
@@ -34,5 +37,12 @@ public class C_F {
         }
 
         return new SpannableStringBuilder("");
+    }
+
+    public static Bitmap viewToBitmap(View view) {
+        Bitmap bitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        view.draw(canvas);
+        return bitmap;
     }
 }

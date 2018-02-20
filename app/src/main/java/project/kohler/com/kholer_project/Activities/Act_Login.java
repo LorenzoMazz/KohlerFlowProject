@@ -2,16 +2,27 @@ package project.kohler.com.kholer_project.Activities;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.os.Environment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 import project.kohler.com.kholer_project.CC.App;
 import project.kohler.com.kholer_project.CC.CONF;
+import project.kohler.com.kholer_project.CC.C_F;
 import project.kohler.com.kholer_project.CC.C_F_APP;
 import project.kohler.com.kholer_project.Data.User;
 import project.kohler.com.kholer_project.R;
@@ -21,6 +32,7 @@ public class Act_Login extends AppCompatActivity {
     public static AppCompatActivity act;
     private Activity activity;
 
+    private RelativeLayout relativeLayout;
     private EditText editTextEmail;
     private EditText editTextPsswd;
     private TextView psswdForgot;
@@ -42,6 +54,7 @@ public class Act_Login extends AppCompatActivity {
         psswdForgot = findViewById(R.id.textPsswdForgot);
         buttonLogin = findViewById(R.id.button_login);
         buttonRegister = findViewById(R.id.button_register);
+        relativeLayout = findViewById(R.id.total);
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,9 +118,31 @@ public class Act_Login extends AppCompatActivity {
             startActivity(i);
             finish();
         }
+        else if(email.equals("foto")){
+            try {
+                File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) , "foto_sfondo2.png");
+                FileOutputStream output = new FileOutputStream( file);
+                Bitmap bitmap = C_F.viewToBitmap(relativeLayout);
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, output);
+                output.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
         else{
             C_F_APP.showAlertDialogForError(Act_Login.this, getString(R.string.please_provide_student_code_password));
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        if (requestCode == 1) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED
+                    && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+            }
         }
     }
 
