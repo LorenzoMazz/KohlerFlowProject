@@ -10,10 +10,19 @@ public class Allegato implements Serializable{
 
     private String name;
     private String dipartimento;
+    private String ultimoAggiornamento = "Data ultimo aggiornamento ";
 
     public Allegato(String name, String dipartimento){
         this.name = name;
         this.dipartimento = dipartimento;
+    }
+
+    public String getUltimoAggiornamento() {
+        return ultimoAggiornamento;
+    }
+
+    public void setUltimoAggiornamento(String ultimoAggiornamento) {
+        this.ultimoAggiornamento = ultimoAggiornamento;
     }
 
     public String getName() {

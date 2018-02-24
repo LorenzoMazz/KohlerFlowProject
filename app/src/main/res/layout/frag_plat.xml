@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_medium"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:layout_weight="1"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:text="@string/tempOne"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/txt_xnormal"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/switchG1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/padding_medium"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:switchPadding="@dimen/padding_small"
+                    android:text="@string/g_one"
+                    android:textSize="@dimen/txt_xnormal"
+                    android:theme="@style/SCBSwitch" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:background="@color/dark_blue"
+                android:paddingBottom="@dimen/padding_small" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/checkDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_large"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="@string/dsgn"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/txt_xnormal" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/padding_small"
+                        app:srcCompat="@drawable/ic_check_circle_blue_36dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/checkCali"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_large"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="@string/cali"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/txt_xnormal" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/padding_small"
+                        app:srcCompat="@drawable/ic_check_circle_blue_36dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/checkApliT1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_large"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="@string/apli"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/txt_xnormal" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/padding_small"
+                        app:srcCompat="@drawable/ic_check_circle_blue_36dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/checkSper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_large"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="@string/sper"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/txt_xnormal" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/padding_small"
+                        app:srcCompat="@drawable/ic_check_circle_blue_36dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/checkLotT1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_large"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="@string/lot"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/txt_xnormal" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/padding_small"
+                        app:srcCompat="@drawable/ic_check_circle_blue_36dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/checkQualiT1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_large"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="@string/quali"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/txt_xnormal" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/padding_small"
+                        app:srcCompat="@drawable/ic_check_circle_blue_36dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_medium"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:layout_weight="1"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:text="@string/temp_two"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/txt_xnormal"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/switchG2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/padding_medium"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:checked="true"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:switchPadding="@dimen/padding_small"
+                    android:text="@string/g_two"
+                    android:textSize="@dimen/txt_xnormal"
+                    android:theme="@style/SCBSwitch" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:background="@color/dark_blue"
+                android:paddingBottom="@dimen/padding_small" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/checkApliT2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_large"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="@string/apli"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/txt_xnormal" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/padding_small"
+                        app:srcCompat="@drawable/ic_check_circle_blue_36dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/checkQualiT2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_large"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="@string/quali"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/txt_xnormal" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/padding_small"
+                        app:srcCompat="@drawable/ic_check_circle_blue_36dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_medium"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:layout_weight="1"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:text="@string/temp_three"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/txt_xnormal"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/switchG3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/padding_medium"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:checked="true"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:switchPadding="@dimen/padding_small"
+                    android:text="@string/g_three"
+                    android:textSize="@dimen/txt_xnormal"
+                    android:theme="@style/SCBSwitch" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:background="@color/dark_blue"
+                android:paddingBottom="@dimen/padding_small" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_medium"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/checkQualiT3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_large"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="@string/quali"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/txt_xnormal" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/padding_small"
+                        app:srcCompat="@drawable/ic_check_circle_blue_36dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/checkLotT3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/padding_large"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="@string/lot"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/txt_xnormal" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/padding_small"
+                        app:srcCompat="@drawable/ic_check_circle_blue_36dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

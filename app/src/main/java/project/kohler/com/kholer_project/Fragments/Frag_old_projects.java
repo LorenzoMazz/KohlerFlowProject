@@ -121,7 +121,7 @@ public class Frag_old_projects extends Fragment {
             showEmptyPage();
         } else {
             hideEmptyPage();
-            ActiveProjectAdapter activeProjectAdapter = new ActiveProjectAdapter(activity, oldProjects);
+            ActiveProjectAdapter activeProjectAdapter = new ActiveProjectAdapter(activity,this, oldProjects);
             oldProjectList.setAdapter(activeProjectAdapter);
         }
         swipeRefreshLayout.setRefreshing(false);
@@ -129,6 +129,13 @@ public class Frag_old_projects extends Fragment {
 
     private void loadOldProject() {
         oldProjects = ((App) activity.getApplicationContext()).getOldProjects();
+    }
+
+    public void loadProject(int position){
+        Intent i = new Intent(activity, Act_main_project.class);
+        i.putExtra("chat", false);
+        ((App) activity.getApplicationContext()).setCurrenteProject(oldProjects.get(position));
+        startActivity(i);
     }
 
     @Override

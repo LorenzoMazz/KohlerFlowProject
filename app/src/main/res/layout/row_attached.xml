@@ -23,16 +23,31 @@
             android:padding="@dimen/padding_small"
             app:srcCompat="@drawable/ic_attach_file_black_24dp" />
 
-        <TextView
-            android:id="@+id/text_document_title"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="Document 1"
-            android:textColor="@color/dark_blue"
-            android:textSize="@dimen/txt_xnormal" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_document_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Document 1"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/txt_xnormal" />
+
+            <TextView
+                android:id="@+id/textViewUlltimoAggiornamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ultimo Aggiornamento"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/txt_mid" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <View

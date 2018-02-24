@@ -26,6 +26,7 @@ import project.kohler.com.kholer_project.Data.User;
 import project.kohler.com.kholer_project.Fragments.Frag_Attached;
 import project.kohler.com.kholer_project.Fragments.Frag_Messages;
 import project.kohler.com.kholer_project.Fragments.Frag_Note;
+import project.kohler.com.kholer_project.Fragments.Frag_plat;
 import project.kohler.com.kholer_project.List_Adapter.Frags_Adapter;
 import project.kohler.com.kholer_project.R;
 
@@ -43,12 +44,14 @@ public class Act_main_project extends AppCompatActivity {
     private CustomViewPager viewPagerFragments;
     private Frags_Adapter frags_adapter;
 
-    private int imageResources[] = {R.drawable.ic_assignment_white_24dp, R.drawable.ic_event_note_white_24dp, R.drawable.ic_message_white_24dp};
+    private int imageResources[] = {R.drawable.ic_assignment_white_24dp, R.drawable.ic_event_note_white_24dp, R.drawable.ic_message_white_24dp,R.drawable.ic_plat_white_24dp};
     int currentPosition;
 
     private Activity activity;
     private Project project;
     private User user;
+
+    private boolean chatEnable;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,6 +61,7 @@ public class Act_main_project extends AppCompatActivity {
         activity = this;
         project = ((App) activity.getApplicationContext()).getCurrenteProject();
         user = ((App)activity.getApplicationContext()).getUser();
+        chatEnable = getIntent().getBooleanExtra("chat", true);
 
         tabLayout = findViewById(R.id.tabHome);
         viewPagerFragments = findViewById(R.id.flContentHome);
@@ -81,7 +85,12 @@ public class Act_main_project extends AppCompatActivity {
 
         frags_adapter.addFragment(new Frag_Attached(), getString(R.string.documents));
         frags_adapter.addFragment(new Frag_Note(), getString(R.string.notes));
-        frags_adapter.addFragment(new Frag_Messages(), getString(R.string.chat));
+        if(chatEnable) {
+            frags_adapter.addFragment(new Frag_Messages(), getString(R.string.chat));
+        }
+        if(user.getDipartimento().equals(CONF.piattaforma)){
+            frags_adapter.addFragment(new Frag_plat(), getString(R.string.piattaforma));
+        }
 
 
 
@@ -116,8 +125,10 @@ public class Act_main_project extends AppCompatActivity {
         });
 
 
-        int notification = project.getUreadMessages();
-        setNotificationMessage(notification);
+        if(chatEnable) {
+            int notification = project.getUreadMessages();
+            setNotificationMessage(notification);
+        }
 
         saveInfo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -253,6 +264,7 @@ public class Act_main_project extends AppCompatActivity {
             }
             tabLayout.getTabAt(i).setCustomView(layout);
         }
+
         viewPagerFragments.setCurrentItem(0);
         tabLayout.getLayoutParams().height = (int)(C_F.getScreenHeight(activity)/8.5);
     }

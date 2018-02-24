@@ -91,32 +91,32 @@ public class Act_Login extends AppCompatActivity {
         {
             ((App) activity.getApplicationContext()).setUser(new User(0, "Mario Rossi", CONF.commerciale, CONF.T_Commerciale));
             startActivity(i);
-            finish();
+            finish_();
         }
         else if(email.equals("pr")){
             ((App) activity.getApplicationContext()).setUser(new User(1, "Claudia Sergi", CONF.prevendita, CONF.T_Prevendita));
             startActivity(i);
-            finish();
+            finish_();
         }
         else if(email.equals("pi")){
             ((App) activity.getApplicationContext()).setUser(new User(2, "Francesca Ferrari", CONF.piattaforma, CONF.T_Piattaforma));
             startActivity(i);
-            finish();
+            finish_();
         }
         else if(email.equals("d")){
             ((App) activity.getApplicationContext()).setUser(new User(3, "Marco Ruspa", CONF.design, CONF.T1));
             startActivity(i);
-            finish();
+            finish_();
         }
         else if(email.equals("a")){
             ((App) activity.getApplicationContext()).setUser(new User(4, "Luca Zeta", CONF.applicazione, CONF.T2));
             startActivity(i);
-            finish();
+            finish_();
         }
         else if(email.equals("q")){
             ((App) activity.getApplicationContext()).setUser(new User(5, "Andrea Bendetto", CONF.qualita, CONF.T3));
             startActivity(i);
-            finish();
+            finish_();
         }
         else if(email.equals("foto")){
             try {
@@ -135,6 +135,10 @@ public class Act_Login extends AppCompatActivity {
         else{
             C_F_APP.showAlertDialogForError(Act_Login.this, getString(R.string.please_provide_student_code_password));
         }
+    }
+
+    private void finish_() {
+        //finish();
     }
 
     @Override

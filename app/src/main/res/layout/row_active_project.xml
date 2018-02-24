@@ -7,7 +7,6 @@
     android:layout_marginBottom="@dimen/padding_medium"
     android:layout_marginLeft="@dimen/padding_medium"
     android:layout_marginTop="@dimen/padding_small"
-    android:clickable="true"
     android:elevation="5dp"
     android:foreground="@drawable/ripple_effect_blue"
     android:paddingBottom="@dimen/padding_small"
@@ -21,109 +20,167 @@
         android:background="@color/white"
         android:orientation="vertical">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/padding_small"
-            android:layout_marginTop="@dimen/padding_small">
-
-
-            <ImageView
-                android:id="@+id/image_icon_project"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/padding_small"
-                android:layout_marginRight="@dimen/padding_small"
-                CircleProgressView:srcCompat="@drawable/ic_assignment_blue_24dp" />
+            android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/layOutProject"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:clickable="true"
+                android:foreground="@drawable/ripple_effect_blue"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small">
 
-                <TextView
-                    android:id="@+id/text_active_project"
+
+                <ImageView
+                    android:id="@+id/image_icon_project"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/padding_small"
+                    android:layout_marginRight="@dimen/padding_small"
+                    CircleProgressView:srcCompat="@drawable/ic_assignment_blue_24dp" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:paddingBottom="@dimen/padding_xx_small"
-                    android:text="PROJECT 1"
-                    android:textColor="@color/dark_blue"
-                    android:textSize="@dimen/txt_xnormal" />
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/text_active_project4"
-                    android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/text_active_project"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:paddingBottom="@dimen/padding_xx_small"
+                        android:text="PROJECT 1"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/txt_xnormal" />
+
+                    <TextView
+                        android:id="@+id/text_active_project4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="Inizio data"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/txt_mid" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageIconAlert"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:text="Inizio data"
-                    android:textColor="@color/dark_blue"
-                    android:textSize="@dimen/txt_mid" />
+                    app:srcCompat="@drawable/ic_warning_red_24dp" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_large"
+                    android:layout_marginRight="@dimen/padding_large">
+
+                    <TextView
+                        android:id="@+id/text_percet_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:text="89%"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="@dimen/txt_normal" />
+
+                    <at.grabner.circleprogress.CircleProgressView
+                        android:id="@+id/circleProgress_state_project"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        CircleProgressView:cpv_barColor="@color/dark_blue"
+                        CircleProgressView:cpv_barStrokeCap="Round"
+                        CircleProgressView:cpv_barWidth="10dp"
+                        CircleProgressView:cpv_innerContourSize="0dp"
+                        CircleProgressView:cpv_maxValue="100"
+                        CircleProgressView:cpv_outerContourSize="0dp"
+                        CircleProgressView:cpv_rimColor="@android:color/darker_gray"
+                        CircleProgressView:cpv_rimWidth="8dp"
+                        CircleProgressView:cpv_seekMode="false"
+                        CircleProgressView:cpv_textSize="0dp"
+                        CircleProgressView:cpv_value="0" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/image_icon_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/padding_small"
+                    CircleProgressView:srcCompat="@drawable/ic_shortcut_t1" />
+
+
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/imageIconAlert"
+                android:id="@+id/imageViewLock"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@drawable/ic_warning_red_24dp" />
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_lock_blue_36dp" />
 
+        </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/padding_large"
-                android:layout_marginRight="@dimen/padding_large">
+        <LinearLayout
+            android:id="@+id/layOutEnableDisable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="@dimen/padding_x_small"
+                android:layout_marginLeft="@dimen/padding_xmlarge"
+                android:layout_marginRight="@dimen/padding_xmlarge"
+                android:layout_marginTop="@dimen/padding_x_small"
+                android:background="@color/dark_blue"
+                android:paddingBottom="@dimen/padding_small" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/padding_small"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/text_percet_state"
+                    android:id="@+id/textView_Attiva_o_Disattiva_Progetto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_centerVertical="true"
-                    android:text="89%"
+                    android:layout_marginLeft="@dimen/padding_small"
+                    android:layout_weight="1"
+                    android:text="@string/disableProject"
                     android:textColor="@color/dark_blue"
                     android:textSize="@dimen/txt_normal" />
 
-                <at.grabner.circleprogress.CircleProgressView
-                    android:id="@+id/circleProgress_state_project"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    CircleProgressView:cpv_barColor="@color/dark_blue"
-                    CircleProgressView:cpv_barStrokeCap="Round"
-                    CircleProgressView:cpv_barWidth="10dp"
-                    CircleProgressView:cpv_innerContourSize="0dp"
-                    CircleProgressView:cpv_maxValue="100"
-                    CircleProgressView:cpv_outerContourSize="0dp"
-                    CircleProgressView:cpv_rimColor="@android:color/darker_gray"
-                    CircleProgressView:cpv_rimWidth="8dp"
-                    CircleProgressView:cpv_seekMode="false"
-                    CircleProgressView:cpv_textSize="0dp"
-                    CircleProgressView:cpv_value="0" />
-            </RelativeLayout>
-
-            <ImageView
-                android:id="@+id/image_icon_temp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginRight="@dimen/padding_small"
-                CircleProgressView:srcCompat="@drawable/ic_shortcut_t1" />
-
-
+                <Switch
+                    android:id="@+id/switchAttivazione_O_disattivazione_rpogetto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_small"
+                    android:theme="@style/SCBSwitch" />
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

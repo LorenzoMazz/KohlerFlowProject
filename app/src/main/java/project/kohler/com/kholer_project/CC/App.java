@@ -44,9 +44,13 @@ public class App extends Application {
     }
 
     public ArrayList<Project> getActiveProjects() {
+        return this.activeProjects;
+    }
+
+    public void initializeActiveProjects() {
+
         activeProjects = new ArrayList<>();
-
-
+        
         Project p = new Project("Progetto 1", "Nome cliente 1", 0, CONF.T_Commerciale,  "16 Febbraio 2018", true);
 
         // public Chat(int id, String LastMessage, String dipartimento, String latsUpdateDate, boolean read){
@@ -177,8 +181,6 @@ public class App extends Application {
 
 
         activeProjects.add(p5);
-
-        return this.activeProjects;
     }
 
     public Project getCurrenteProject() {
@@ -191,5 +193,14 @@ public class App extends Application {
 
     public void setCurrenteProject(Project currenteProject) {
         this.currenteProject = currenteProject;
+    }
+
+    public void setProjectActive(boolean state, String name){
+        for(Project p: activeProjects){
+            if(p.getName().equals(name)){
+                p.setActive(state);
+                break;
+            }
+        }
     }
 }

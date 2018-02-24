@@ -15,14 +15,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".Activities.Act_Login">
+        <activity android:name=".Activities.Act_Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.Act_Splash" />
+        <activity android:name=".Activities.Act_Login" />
         <activity android:name=".Activities.Act_home" />
         <activity android:name=".Activities.Act_compilation_commercial" />
         <activity android:name=".Activities.Act_sub_compilation_commercial" />

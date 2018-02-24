@@ -24,6 +24,7 @@ public class Project implements Serializable{
     private ArrayList<String> dipartimenti;
 
     private boolean rejected;
+    public boolean active = true;
 
     public Project(String name, String clientName, int progress, int actualTemp, String dateStart, boolean rejected){
         this.name = name;
@@ -36,6 +37,14 @@ public class Project implements Serializable{
         this.listAllegati = new ArrayList<>();
         this.listaChatProgetto = new ArrayList<>();
         this.listaNoteProgetto = new ArrayList<>();
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     public ArrayList<String> getDipartimenti() {

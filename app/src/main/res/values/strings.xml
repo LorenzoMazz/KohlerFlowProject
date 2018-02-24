@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Kholer_Project</string>
+    <string name="app_name">Kohler Flow Project</string>
     <string name="password">Password</string>
     <string name="email">Email</string>
     <string name="login">Login</string>
@@ -74,4 +74,22 @@
     <string name="function_not_enable">Funzione non abilitata</string>
     <string name="progettiConclusi">PROGETTI CONCLUSI</string>
     <string name="noOldProject">Non ci sono progetti nello storico</string>
+    <string name="activeProject">Attiva Progetto</string>
+    <string name="disableProject">Disattiva Progetto</string>
+    <string name="kohlerFlowProject">KOHLER FLOW PROJECT</string>
+    <string name="piattaforma">PLAT</string>
+    <string name="t_one">T1</string>
+    <string name="g_one">G1</string>
+    <string name="tempOne">Tempo 1</string>
+    <string name="temp_two">Tempo 2</string>
+    <string name="g_two">G2</string>
+    <string name="g_three">G3</string>
+    <string name="temp_three">Tempo 3</string>
+    <string name="design">Design</string>
+    <string name="dsgn">DSGN</string>
+    <string name="apli">APLI</string>
+    <string name="sper">SPER</string>
+    <string name="lot">LOT</string>
+    <string name="quali">QUALI</string>
+    <string name="cali">CALI</string>
 </resources>

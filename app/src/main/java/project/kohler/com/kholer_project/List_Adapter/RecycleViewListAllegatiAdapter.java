@@ -29,12 +29,14 @@ public class RecycleViewListAllegatiAdapter extends RecyclerView.Adapter<Recycle
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textViewDate;
+        TextView textViewDocumentTitle;
+        TextView textViewLastUpdate;
 
         public ViewHolder(View v) {
             super(v);
 
-            textViewDate = v.findViewById(R.id.text_document_title);
+            textViewDocumentTitle = v.findViewById(R.id.text_document_title);
+            textViewLastUpdate = v.findViewById(R.id.textViewUlltimoAggiornamento);
         }
     }
 
@@ -58,7 +60,8 @@ public class RecycleViewListAllegatiAdapter extends RecyclerView.Adapter<Recycle
     @Override
     public void onBindViewHolder(RecycleViewListAllegatiAdapter.ViewHolder holder, final int position) {
 
-            holder.textViewDate.setText(allegati.get(position).getName());
+            holder.textViewDocumentTitle.setText(allegati.get(position).getName());
+            holder.textViewLastUpdate.setText(allegati.get(position).getUltimoAggiornamento() + allegati.get(position).getName());
     }
 
     @Override

@@ -74,7 +74,7 @@ public class Frag_main_account extends Fragment {
 
         loadPage();
 
-        activeProjectList.addOnItemTouchListener(new RecycleViewTouchListener(activity, activeProjectList, new ClickListenerR.ClickListener() {
+        /*activeProjectList.addOnItemTouchListener(new RecycleViewTouchListener(activity, activeProjectList, new ClickListenerR.ClickListener() {
             @Override
             public void onClick(View view, int position) {
                 Intent i = new Intent(activity, Act_main_project.class);
@@ -85,7 +85,7 @@ public class Frag_main_account extends Fragment {
             @Override
             public void onLongClick(View view, int position) {
             }
-        }));
+        }));*/
 
         swipeRefreshLayout.setColorSchemeColors(getResources().getColor(R.color.dark_blue));
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -136,7 +136,7 @@ public class Frag_main_account extends Fragment {
             showEmptyPage();
         } else {
             hideEmptyPage();
-            ActiveProjectAdapter activeProjectAdapter = new ActiveProjectAdapter(activity, activeProjects);
+            ActiveProjectAdapter activeProjectAdapter = new ActiveProjectAdapter(activity,this, activeProjects);
             activeProjectList.setAdapter(activeProjectAdapter);
         }
         swipeRefreshLayout.setRefreshing(false);
@@ -144,6 +144,12 @@ public class Frag_main_account extends Fragment {
 
     private void loadActiveProject() {
         activeProjects = C_F_APP.getVisibleProject(activity, user.getTemp(), user.getDipartimento());
+    }
+
+    public void loadProject(int position){
+        Intent i = new Intent(activity, Act_main_project.class);
+        ((App) activity.getApplicationContext()).setCurrenteProject(activeProjects.get(position));
+        startActivity(i);
     }
 
     @Override
