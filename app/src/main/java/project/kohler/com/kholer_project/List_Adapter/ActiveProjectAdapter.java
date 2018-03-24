@@ -109,10 +109,11 @@ public class ActiveProjectAdapter extends RecyclerView.Adapter<ActiveProjectAdap
             holder.iconAlert.setVisibility(View.GONE);
         }
 
-        if(!user.getDipartimento().equals(CONF.piattaforma)){
+        if(!user.getDipartimento().getNome().equals(CONF.piattaforma)){
             holder.linearLayoutEnableDisable.setVisibility(View.GONE);
         }
         else{
+            holder.linearLayoutEnableDisable.setVisibility(View.VISIBLE);
             if(active_project.isActive()){
                 holder.switchProjectActive.setChecked(true);
                 holder.enableOrDisableProject.setText(activity.getString(R.string.disableProject));

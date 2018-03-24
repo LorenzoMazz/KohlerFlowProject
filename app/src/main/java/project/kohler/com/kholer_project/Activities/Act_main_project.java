@@ -88,7 +88,7 @@ public class Act_main_project extends AppCompatActivity {
         if(chatEnable) {
             frags_adapter.addFragment(new Frag_Messages(), getString(R.string.chat));
         }
-        if(user.getDipartimento().equals(CONF.piattaforma)){
+        if(user.getDipartimento().getNome().equals(CONF.piattaforma)){
             frags_adapter.addFragment(new Frag_plat(), getString(R.string.piattaforma));
         }
 
@@ -133,7 +133,7 @@ public class Act_main_project extends AppCompatActivity {
         saveInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(project.isRevisionedFromDepartment(user.getDipartimento())) {
+                if(project.isRevisionedFromDepartment(user.getDipartimento().getNome())) {
                     showLogoutDialog();
                 }
                 else{
@@ -161,7 +161,7 @@ public class Act_main_project extends AppCompatActivity {
         btnRejectProject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String sender = user.getDipartimento();
+                String sender = user.getDipartimento().getNome();
                 String reciver = "";
                switch (user.getTemp()){
                    case CONF.T_Prevendita:

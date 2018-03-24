@@ -14,6 +14,7 @@ public class Note implements Serializable {
     private String date;
     private boolean read;
     private boolean warning;
+    private boolean notificationG2;
 
     public Note(int id, String message, String sender, String date, boolean read, boolean warning){
         this.id = id;
@@ -22,6 +23,15 @@ public class Note implements Serializable {
         this.date = date;
         this.read = read;
         this.warning = warning;
+        this.notificationG2 = false;
+    }
+
+    public boolean isNotificationG2() {
+        return notificationG2;
+    }
+
+    public void setNotificationG2(boolean notificationG2) {
+        this.notificationG2 = notificationG2;
     }
 
     public boolean isWarning() {

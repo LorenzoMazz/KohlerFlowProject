@@ -27,7 +27,7 @@ public class Act_Splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                ((App) activity.getApplicationContext()).initializeActiveProjects();
+                ((App)activity.getApplicationContext()).initializeActiveProjects();
                 Intent intent = new Intent(activity, Act_Login.class);
                 startActivity(intent);
                 finish();

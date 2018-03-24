@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 import project.kohler.com.kholer_project.Data.Allegato;
 import project.kohler.com.kholer_project.Data.Chat;
+import project.kohler.com.kholer_project.Data.Dipartimento;
+import project.kohler.com.kholer_project.Data.Gate;
 import project.kohler.com.kholer_project.Data.Note;
 import project.kohler.com.kholer_project.Data.Project;
 import project.kohler.com.kholer_project.Data.User;
@@ -69,8 +71,10 @@ public class App extends Application {
         p.addNote(new Note(0, "Nota 1 commerciale", CONF.commerciale, "17/02/2018", true, false));
 
         //dipartimenti interessati
-        p.addDipartimento(CONF.commerciale);
-        p.addDipartimento(CONF.prevendita);
+        p.addDipartimento(CONF.commerciale, CONF.ic_commerciale);
+        p.addDipartimento(CONF.prevendita, CONF.ic_prevendita);
+
+        p.addgate(new Gate(CONF.gate1, CONF.ic_g1));
 
         activeProjects.add(p);
 
@@ -87,21 +91,26 @@ public class App extends Application {
         p2.addAllegato(new Allegato("Allegato 2 Design", CONF.design));
         p2.addAllegato(new Allegato(CONF.revsione, CONF.sper));
         p2.addAllegato(new Allegato("Allegato 2 Sper", CONF.sper));
-        p2.addAllegato(new Allegato("Allegato 1 Applicazione", CONF.applicazione));
+        p2.addAllegato(new Allegato("Allegato 1 Applicazione", CONF.applicazioneT2));
 
 
+        Note g2 = new Note(0, "Conferma gate 2", CONF.piattaforma, "15/01/2018", false, false);
+        g2.setNotificationG2(true);
+        p2.addNote(g2);
         p2.addNote(new Note(0, "Nota 1 commerciale", CONF.commerciale, "01/01/2018", false, false));
         p2.addNote(new Note(0, "Nota 1 prevendita", CONF.prevendita, "12/01/2018", false, false));
         p2.addNote(new Note(0, "Nota 1 piattaforma", CONF.piattaforma, "15/01/2018", false, false));
         p2.addNote(new Note(0, "Nota 1 design", CONF.design, "02/2/2018", true, false));
         p2.addNote(new Note(0, "Nota 1 sper", CONF.sper, "14/02/2018", true, false));
+        p2.addDipartimento(CONF.commerciale, CONF.ic_commerciale);
+        p2.addDipartimento(CONF.prevendita, CONF.ic_prevendita);
+        p2.addDipartimento(CONF.piattaforma,CONF.ic_piattaforma);
+        p2.addDipartimento(CONF.design,CONF.ic_design);
+        p2.addDipartimento(CONF.sper,CONF.ic_sper);
+        p2.addDipartimento(CONF.applicazioneT2,CONF.ic_applicazioneT2);
 
-        p2.addDipartimento(CONF.commerciale);
-        p2.addDipartimento(CONF.prevendita);
-        p2.addDipartimento(CONF.piattaforma);
-        p2.addDipartimento(CONF.design);
-        p2.addDipartimento(CONF.sper);
-        p2.addDipartimento(CONF.applicazione);
+        p2.addgate(new Gate(CONF.gate1, CONF.ic_g1));
+        p2.addgate(new Gate(CONF.gate2, CONF.ic_g2));
 
         activeProjects.add(p2);
 
@@ -123,10 +132,12 @@ public class App extends Application {
         p3.addNote(new Note(0, "Nota 1 piattaforma", CONF.piattaforma, "15/01/2018", false, false));
         p3.addNote(new Note(0, "Nota 1 design", CONF.design, "02/2/2018", true, false));
 
-        p3.addDipartimento(CONF.commerciale);
-        p3.addDipartimento(CONF.prevendita);
-        p3.addDipartimento(CONF.piattaforma);
-        p3.addDipartimento(CONF.design);
+        p3.addDipartimento(CONF.commerciale, CONF.ic_commerciale);
+        p3.addDipartimento(CONF.prevendita, CONF.ic_prevendita);
+        p3.addDipartimento(CONF.piattaforma,CONF.ic_piattaforma);
+        p3.addDipartimento(CONF.design,CONF.ic_design);
+
+        p3.addgate(new Gate(CONF.gate1, CONF.ic_g1));
 
         activeProjects.add(p3);
 
@@ -148,11 +159,12 @@ public class App extends Application {
 
 
 
-        p4.addDipartimento(CONF.commerciale);
-        p4.addDipartimento(CONF.prevendita);
-        p4.addDipartimento(CONF.piattaforma);
+        p4.addDipartimento(CONF.commerciale, CONF.ic_commerciale);
+        p4.addDipartimento(CONF.prevendita, CONF.ic_prevendita);
+        p4.addDipartimento(CONF.piattaforma,CONF.ic_piattaforma);
 
 
+        p4.addgate(new Gate(CONF.gate1, CONF.ic_g1));
         activeProjects.add(p4);
 
         Project p5 = new Project("Progetto 5", "Nome cliente 5", 0, CONF.T_Piattaforma,  "07 Novembre 2017", true); //respinto da design
@@ -174,11 +186,12 @@ public class App extends Application {
 
 
 
-        p5.addDipartimento(CONF.commerciale);
-        p5.addDipartimento(CONF.prevendita);
-        p5.addDipartimento(CONF.piattaforma);
-        p5.addDipartimento(CONF.design);
+        p5.addDipartimento(CONF.commerciale, CONF.ic_commerciale);
+        p5.addDipartimento(CONF.prevendita, CONF.ic_prevendita);
+        p5.addDipartimento(CONF.piattaforma,CONF.ic_piattaforma);
+        p5.addDipartimento(CONF.design,CONF.ic_design);
 
+        p5.addgate(new Gate(CONF.gate1, CONF.ic_g1));
 
         activeProjects.add(p5);
     }

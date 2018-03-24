@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import project.kohler.com.kholer_project.CC.App;
+import project.kohler.com.kholer_project.Data.Dipartimento;
 import project.kohler.com.kholer_project.Data.Project;
 import project.kohler.com.kholer_project.Data.User;
 import project.kohler.com.kholer_project.R;
@@ -23,7 +24,7 @@ import project.kohler.com.kholer_project.R;
 public class RecycleViewListDepartmentAdapter extends RecyclerView.Adapter<RecycleViewListDepartmentAdapter.ViewHolder> {
 
     private Activity activity;
-    private ArrayList<String> dipartimenti;
+    private ArrayList<Dipartimento> dipartimenti;
 
     private User user;
     private Project project;
@@ -32,16 +33,18 @@ public class RecycleViewListDepartmentAdapter extends RecyclerView.Adapter<Recyc
 
         TextView textViewDate;
         ImageView revision;
+        ImageView iconDip;
 
         public ViewHolder(View v) {
             super(v);
 
             textViewDate = v.findViewById(R.id.text_document_title);
             revision = v.findViewById(R.id.imageViewRevision);
+            iconDip = v.findViewById(R.id.imageViewIconDepartment);
         }
     }
 
-    public RecycleViewListDepartmentAdapter(Activity activity, ArrayList<String> dipartimenti) {
+    public RecycleViewListDepartmentAdapter(Activity activity, ArrayList<Dipartimento> dipartimenti) {
         this.activity = activity;
         this.dipartimenti = dipartimenti;
         user = ((App) this.activity.getApplicationContext()).getUser();
@@ -62,14 +65,16 @@ public class RecycleViewListDepartmentAdapter extends RecyclerView.Adapter<Recyc
     @Override
     public void onBindViewHolder(RecycleViewListDepartmentAdapter.ViewHolder holder, final int position) {
 
+        holder.iconDip.setImageResource(dipartimenti.get(position).getIcon());
+
         if(user.getDipartimento().equals(dipartimenti.get(position))){
             holder.textViewDate.setText("Visualizza i tuoi allegati");
         }
         else {
-            holder.textViewDate.setText("Visualizza allegati di " + dipartimenti.get(position));
+            holder.textViewDate.setText("Allegati " + dipartimenti.get(position).getNome());
         }
-        if(project.isRevisionedFromDepartment(dipartimenti.get(position))){
-            holder.revision.setVisibility(View.VISIBLE);
+        if(project.isRevisionedFromDepartment(dipartimenti.get(position).getNome())){
+            holder.revision.setVisibility(View.GONE);
         }
         else{
             holder.revision.setVisibility(View.GONE);

@@ -8,7 +8,6 @@ import android.os.Environment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,6 +23,7 @@ import project.kohler.com.kholer_project.CC.App;
 import project.kohler.com.kholer_project.CC.CONF;
 import project.kohler.com.kholer_project.CC.C_F;
 import project.kohler.com.kholer_project.CC.C_F_APP;
+import project.kohler.com.kholer_project.Data.Dipartimento;
 import project.kohler.com.kholer_project.Data.User;
 import project.kohler.com.kholer_project.R;
 
@@ -89,32 +89,32 @@ public class Act_Login extends AppCompatActivity {
 
         if(email.equals("c"))
         {
-            ((App) activity.getApplicationContext()).setUser(new User(0, "Mario Rossi", CONF.commerciale, CONF.T_Commerciale));
+            ((App) activity.getApplicationContext()).setUser(new User(0, "Mario Rossi",new Dipartimento( CONF.commerciale, CONF.ic_commerciale), CONF.T_Commerciale));
             startActivity(i);
             finish_();
         }
         else if(email.equals("pr")){
-            ((App) activity.getApplicationContext()).setUser(new User(1, "Claudia Sergi", CONF.prevendita, CONF.T_Prevendita));
+            ((App) activity.getApplicationContext()).setUser(new User(1, "Claudia Sergi",new Dipartimento(CONF.prevendita, CONF.ic_prevendita), CONF.T_Prevendita));
             startActivity(i);
             finish_();
         }
         else if(email.equals("pi")){
-            ((App) activity.getApplicationContext()).setUser(new User(2, "Francesca Ferrari", CONF.piattaforma, CONF.T_Piattaforma));
+            ((App) activity.getApplicationContext()).setUser(new User(2, "Francesca Ferrari",new Dipartimento(CONF.piattaforma, CONF.ic_piattaforma), CONF.T_Piattaforma));
             startActivity(i);
             finish_();
         }
         else if(email.equals("d")){
-            ((App) activity.getApplicationContext()).setUser(new User(3, "Marco Ruspa", CONF.design, CONF.T1));
+            ((App) activity.getApplicationContext()).setUser(new User(3, "Marco Ruspa",new Dipartimento( CONF.design, CONF.ic_design), CONF.T1));
             startActivity(i);
             finish_();
         }
         else if(email.equals("a")){
-            ((App) activity.getApplicationContext()).setUser(new User(4, "Luca Zeta", CONF.applicazione, CONF.T2));
+            ((App) activity.getApplicationContext()).setUser(new User(4, "Luca Zeta",new Dipartimento( CONF.applicazioneT2, CONF.ic_applicazioneT2), CONF.T2));
             startActivity(i);
             finish_();
         }
         else if(email.equals("q")){
-            ((App) activity.getApplicationContext()).setUser(new User(5, "Andrea Bendetto", CONF.qualita, CONF.T3));
+            ((App) activity.getApplicationContext()).setUser(new User(5, "Andrea Bendetto",new Dipartimento(CONF.qualitaT3, CONF.ic_qualitaT3), CONF.T3));
             startActivity(i);
             finish_();
         }

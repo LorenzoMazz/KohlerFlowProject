@@ -13,6 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import project.kohler.com.kholer_project.CC.App;
+import project.kohler.com.kholer_project.CC.CONF;
 import project.kohler.com.kholer_project.CC.C_F;
 import project.kohler.com.kholer_project.Data.Note;
 import project.kohler.com.kholer_project.Data.Project;
@@ -96,6 +97,14 @@ public class RecycleViewNoteAdapter extends RecyclerView.Adapter<RecycleViewNote
                 holder.buttonSeeMore.setBackground(myActivity.getResources().getDrawable(R.drawable.btn_log_red));
             }
         }
+        else  if(note.isNotificationG2() && ((user.getDipartimento().getNome().equals(CONF.applicazioneT2)) || (user.getDipartimento().getNome().equals(CONF.piattaforma)))){
+            holder.imageViewWarning.setVisibility(View.GONE);
+                if (Build.VERSION.SDK_INT >= 21) {
+                    holder.buttonSeeMore.setBackground(myActivity.getDrawable(R.drawable.btn_log_green));
+                } else {
+                    holder.buttonSeeMore.setBackground(myActivity.getResources().getDrawable(R.drawable.btn_log_green));
+                }
+            }
         else{
             holder.imageViewWarning.setVisibility(View.GONE);
             if (Build.VERSION.SDK_INT >= 21) {
@@ -103,8 +112,9 @@ public class RecycleViewNoteAdapter extends RecyclerView.Adapter<RecycleViewNote
             } else {
                 holder.buttonSeeMore.setBackground(myActivity.getResources().getDrawable(R.drawable.btn_log_blue));
             }
-
         }
+
+
 
 
 

@@ -21,7 +21,8 @@ public class Project implements Serializable{
     private ArrayList<Note> listaNoteProgetto;
     private ArrayList<Chat> listaChatProgetto;
     private ArrayList<Allegato> listAllegati;
-    private ArrayList<String> dipartimenti;
+    private ArrayList<Dipartimento> dipartimenti;
+    private ArrayList<Gate> gates;
 
     private boolean rejected;
     public boolean active = true;
@@ -37,8 +38,20 @@ public class Project implements Serializable{
         this.listAllegati = new ArrayList<>();
         this.listaChatProgetto = new ArrayList<>();
         this.listaNoteProgetto = new ArrayList<>();
+        this.gates = new ArrayList<>();
     }
 
+    public ArrayList<Gate> getGates() {
+        return gates;
+    }
+
+    public void setGates(ArrayList<Gate> gates) {
+        this.gates = gates;
+    }
+
+    public void addgate(Gate gate){
+        this.gates.add(gate);
+    }
     public boolean isActive() {
         return active;
     }
@@ -47,12 +60,21 @@ public class Project implements Serializable{
         this.active = active;
     }
 
-    public ArrayList<String> getDipartimenti() {
+    public ArrayList<Dipartimento> getDipartimenti() {
         return dipartimenti;
     }
 
-    public void setDipartimenti(ArrayList<String> dipartimenti) {
+    public void setDipartimenti(ArrayList<Dipartimento> dipartimenti) {
         this.dipartimenti = dipartimenti;
+    }
+
+    public boolean hasDipartimento(String dipartimento){
+        for(Dipartimento s: getDipartimenti()){
+            if(s.getNome().equals(dipartimento)){
+                return  true;
+            }
+        }
+        return false;
     }
 
     public void addAllegato(Allegato allegato){
@@ -67,7 +89,7 @@ public class Project implements Serializable{
         this.listaNoteProgetto.add(note);
     }
 
-    public void addDipartimento(String dipartimento){ this.dipartimenti.add(dipartimento);}
+    public void addDipartimento(String nome, int icon){ this.dipartimenti.add(new Dipartimento(nome, icon));}
 
     public ArrayList<Allegato> getListAllegati() {
         return listAllegati;
@@ -149,12 +171,32 @@ public class Project implements Serializable{
         this.name = name;
     }
 
-    public boolean isVisible(int tempDip, String dipartimento) {
-        if(dipartimento.equals(CONF.commerciale) || dipartimento.equals(CONF.piattaforma) || dipartimento.equals(CONF.prevendita)) {
-            return (this.actualTemp >= tempDip && this.dipartimenti.contains(dipartimento));
+    public boolean isVisible(int tempDip, Dipartimento dipartimento) {
+        if(dipartimento.getNome().equals(CONF.commerciale) || dipartimento.getNome().equals(CONF.piattaforma) || dipartimento.getNome().equals(CONF.prevendita)) {
+            if (this.actualTemp >= tempDip ){
+                for(Dipartimento d: this.dipartimenti){
+                    if(d.getNome().equals(dipartimento.getNome())){
+                        return  true;
+                    }
+                }
+                return false;
+            }
+            else{
+                return false;
+            }
         }
         else{
-            return (this.actualTemp == tempDip && this.dipartimenti.contains(dipartimento));
+            if (this.actualTemp == tempDip){
+                for(Dipartimento d: this.dipartimenti){
+                    if(d.getNome().equals(dipartimento.getNome())){
+                        return  true;
+                    }
+                }
+                return false;
+            }
+            else{
+                return false;
+            }
         }
     }
 

@@ -10,11 +10,11 @@ public class User implements Serializable {
 
     private int idWorker;
     private String name;
-    private String dipartimento;
+    private Dipartimento dipartimento;
     private int temp;
 
 
-    public User( int idStudent, String name, String dipartimento, int temp){
+    public User( int idStudent, String name, Dipartimento dipartimento, int temp){
         this.idWorker = idStudent;
         this.name = name;
         this.dipartimento = dipartimento;
@@ -33,7 +33,7 @@ public class User implements Serializable {
         return idWorker;
     }
 
-    public String getDipartimento() {
+    public Dipartimento getDipartimento() {
         return dipartimento;
     }
 
@@ -41,7 +41,7 @@ public class User implements Serializable {
         return name;
     }
 
-    public void setDipartimento(String dipartimento) {
+    public void setDipartimento(Dipartimento dipartimento) {
         this.dipartimento = dipartimento;
     }
 

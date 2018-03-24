@@ -75,7 +75,7 @@ public class Act_home extends AppCompatActivity implements View.OnClickListener{
         layoutMail.setAlpha((float)0.2);
 
 
-        text_nome_dipartimento.setText(user.getDipartimento());
+        text_nome_dipartimento.setText(user.getDipartimento().getNome());
         textViewNameWorker.setText(user.getName());
 
         layoutHome.setOnClickListener(this);

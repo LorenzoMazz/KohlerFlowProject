@@ -5,6 +5,7 @@ import android.view.View;
 
 import java.util.ArrayList;
 
+import project.kohler.com.kholer_project.Data.Dipartimento;
 import project.kohler.com.kholer_project.Data.Project;
 import project.kohler.com.kholer_project.R;
 
@@ -44,7 +45,7 @@ public class C_F_APP {
         return dipartimenti;
     }
 
-    public static ArrayList<Project> getVisibleProject(Activity activity, int tempDip, String dipartimento) {
+    public static ArrayList<Project> getVisibleProject(Activity activity, int tempDip, Dipartimento dipartimento) {
         ArrayList<Project> activeProject = ((App) activity.getApplicationContext()).getActiveProjects();
         ArrayList<Project> visibleProject = new ArrayList<>();
         for(Project project: activeProject){

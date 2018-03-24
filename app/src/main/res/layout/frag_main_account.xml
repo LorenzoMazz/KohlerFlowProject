@@ -88,14 +88,6 @@
 
     </RelativeLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/padding_x_small"
-        android:layout_above="@+id/bottom"
-        android:layout_alignParentTop="false"
-        android:layout_marginBottom="-1dp"
-        android:background="@drawable/shadow_blue_invers" />
-
     <LinearLayout
         android:id="@+id/bottom"
         android:layout_width="match_parent"

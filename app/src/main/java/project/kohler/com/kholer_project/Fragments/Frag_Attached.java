@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -62,8 +63,9 @@ public class Frag_Attached extends Fragment {
         btnAddAttached = v.findViewById(R.id.button_add_attached);
 
 
-        mLayoutManager = new LinearLayoutManager(activity);
-        recyclerView.setLayoutManager(mLayoutManager);
+        //mLayoutManager = new LinearLayoutManager(activity);
+        GridLayoutManager layoutManager = new GridLayoutManager(activity, 3);
+        recyclerView.setLayoutManager(layoutManager);
 
         user = ((App) activity.getApplicationContext()).getUser();
         setUpAdapter();
@@ -73,7 +75,7 @@ public class Frag_Attached extends Fragment {
             public void onClick(View view, int position) {
                 Intent i = new Intent(activity, Act_list_attached.class);
                 i.putExtra("title", C_F_APP.getAllDipartimenti().get(position));
-                i.putExtra("allegati", project.getAttachedFromDepartment(project.getDipartimenti().get(position)));
+                i.putExtra("allegati", project.getAttachedFromDepartment(project.getDipartimenti().get(position).getNome()));
                 startActivity(i);
             }
 
